@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Our Anniversary 365 Days</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Times New Roman", serif;
+      background: #fff0f5;
+      text-align: center;
+    }
+
+    section {
+      display: none;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 1rem;
+      border: none;
+      border-radius: 25px;
+      background: #e91e63;
+      color: white;
+      cursor: pointer;
+      margin-top: 20px;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #c2185b;
+    }
+
+    /* Hujan hati */
+    .hearts {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .heart {
+      position: absolute;
+      color: red;
+      font-size: 24px;
+      animation: fall 6s linear infinite;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(-10%); opacity: 1; }
+      100% { transform: translateY(110vh); opacity: 0; }
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Kolase foto */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 10px;
+      margin-top: 30px;
+    }
+
+    .gallery img {
+      width: 100%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    /* Modal */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.8);
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      padding: 20px;
+    }
+
+    .modal-content {
+      background: #e91e63;
+      padding: 20px;
+      border-radius: 15px;
+      max-width: 400px;
+    }
+
+    .modal-content img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    .close {
+      margin-top: 15px;
+      padding: 8px 16px;
+      background: white;
+      color: #e91e63;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    /* Audio controls */
+    .audio-control {
+      position: fixed;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 10;
+      background: #e91e63;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      cursor: pointer;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    }
+  </style>
+</head>
+<body onload="showPage('beranda')">
+
+  <!-- Audio Background -->
+  <audio id="bg-audio" loop>
+    <source src="audio/Sampai Tua Nanti.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+  <button class="audio-control" onclick="toggleAudio()">Play/Pause Music</button>
+
+  <!-- Beranda -->
+  <section id="beranda" style="display:block;">
+    <div class="content">
+      <h1>Welcome My Love ❤️</h1>
+      <p>Happy Anniversary 365 Days with you is the best gift of my life.</p>
+      <button onclick="showPage('about')">About Us</button>
+      <button onclick="showPage('ucapan')">Kata Ucapan</button>
+      <button onclick="showPage('surprise')">🎁 See Surprise</button>
+    </div>
+  </section>
+
+  <!-- About Us -->
+  <section id="about">
+    <div class="content">
+      <h1>About Us 💑</h1>
+      <p>Kita pertama kali bertemu di Telegram. Awalnya hanya saling sapa, ngobrol seadanya, tapi dalam hitungan hari, aku sudah merasa nyaman denganmu. Ada sesuatu yang berbeda—cara kamu bicara, cara kamu mendengarkan, dan cara kamu membuatku merasa aman meski baru mengenalmu. Dalam waktu kurang dari seminggu, aku sadar bahwa kamu bukan hanya teman ngobrol biasa, tapi seseorang yang membuat hatiku tenang.</p>
+      <p>Seiring waktu berjalan, kita mulai pacaran. Banyak momen manis yang kita lewati—dari tawa ringan hingga canda yang membuat hari-hari biasa terasa spesial. Bahkan saat ada salah paham, kita selalu menemukan cara untuk saling mengerti dan memperbaiki diri, bukan saling menyalahkan. Aku belajar banyak tentang kesabaran dan pengertian dari cara kamu bersikap.</p>
+      <p>Kamu bukan hanya pasangan, tapi juga rumah—tempat aku merasa diterima sepenuhnya. Bersamamu, aku bisa menjadi diri sendiri tanpa takut dihakimi. Senyummu, tatapanmu, dan cara kamu memperhatikanku selalu membuatku jatuh cinta lagi dan lagi. Setiap detik bersamamu terasa berharga, dan aku merasa beruntung karena semesta mempertemukan kita.</p>
+      <p>Satu tahun ini penuh dengan kenangan yang tak terlupakan. Dari momen sederhana seperti ngobrol larut malam, berbagi cerita lucu, sampai perjalanan dan petualangan seru bersama, semuanya terasa istimewa karena kita menjalaninya bersama. Aku bersyukur setiap hari karena kamu selalu ada di sisiku, mendukungku, dan membuat hidupku lebih berwarna.</p>
+      <p>Kamu telah menjadi bagian dari hidupku yang tak tergantikan. Aku menyayangimu bukan hanya karena hal-hal indah, tapi juga karena cara kamu tetap ada di saat aku lelah, kecewa, atau merasa rapuh. Kita belajar bersama, tertawa bersama, bahkan menangis bersama. Semua itu membuat ikatan kita semakin kuat dan tak tergoyahkan.</p>
+      <p>Terima kasih karena sudah menjadi dirimu yang luar biasa, karena telah memilihku setiap hari, dan karena selalu ada di sisiku tanpa syarat. Aku berjanji akan selalu menjaga kita, menghargai setiap momen, dan terus mencintaimu dengan sepenuh hati. Happy 365 Days Anniversary, my love! Semoga perjalanan kita ke depan selalu penuh cinta, tawa, dan kebahagiaan. 💖</p>
+      <button onclick="showPage('beranda')">Back to Home</button>
+    </div>
+  </section>
+
+  <!-- Kata Ucapan -->
+  <section id="ucapan">
+    <div class="content">
+      <h1>Kata Ucapan 💌</h1>
+      <div class="ucapan-box">
+        <p>365 Day</p>
+        <p>Satu tahun penuh cerita, tawa, air mata, pelukan, diam-diam saling ngerti, dan saling bertahan. Gak nyangka ya kita bisa sampai sejauh ini.</p>
+        <p>Awalnya cuma kenal biasa, lama-lama jadi tempat pulang. Jadi orang yang paling ngerti, jadi satu-satunya yang bisa nenangin tanpa banyak kata.</p>
+        <p>Selama setahun ini, kamu udah banyak banget ngasih aku hal yang mungkin gak bisa aku balas satu per satu. Kesabaran kamu, ketulusan kamu, perjuangan kamu buat terus ada. Semua itu gak pernah aku anggap sepele.</p>
+        <p>Aku tahu kita gak sempurna. Kadang salah paham, kadang saling bikin kecewa. Tapi hebatnya, kita gak pernah bener-bener ninggalin, selalu ada yang mau memperbaiki, selalu ada yang mau bertahan.</p>
+        <p>Aku bersyukur banget, dari semua orang yang bisa datang dan pergi, semesta milih kamu buat jadi temen aku jatuh cinta setiap hari dan aku harap, setiap hari ke depan pun, tetap kamu.</p>
+        <p>Terima kasih ya, udah bareng aku sampai di titik satu tahun ini. Semoga tahun-tahun selanjutnya bisa kita lewatin bareng, saling jaga, saling kuat, dan saling cinta.</p>
+        <p>Aku sayang kamu 🤍🤍🤍</p>
+        <p>Happy 365 Days Cinta!!</p>
+      </div>
+      <button onclick="showPage('beranda')">Back</button>
+    </div>
+  </section>
+
+  <!-- Surprise -->
+  <section id="surprise">
+    <div class="hearts" id="hearts-container"></div>
+
+    <div class="content">
+      <h1>Happy Anniversary 365 Days 💕</h1>
+      <p>Here are 20 moments with you that I’ll always cherish. Click each photo for the story behind it. ❤️</p>
+
+      <div class="gallery">
+        <img src="img/foto1.jpg" alt="Foto 1" onclick="showModal(this.src, 'Ini foto selfie pertama kita 🫶')">
+        <img src="img/foto2.jpg" alt="Foto 2" onclick="showModal(this.src, 'Ini foto pertama kali bertiga, first time aku liat kamu ga make kerudung, behh speechless aku, kamu cantik banget 😍')">
+        <img src="img/foto3.jpg" alt="Foto 3" onclick="showModal(this.src, 'Beehh gilaa cakep banget pacal akuuu 🥰')">
+        <img src="img/foto4.jpg" alt="Foto 4" onclick="showModal(this.src, 'Foto paparazi karena kamu sadar kamera banget huhu')">
+        <img src="img/foto5.jpg" alt="Foto 5" onclick="showModal(this.src, 'Foto kita sehabis joging, abis itu nyebat bareng di WiFi ID HAHA')">
+
+        <img src="img/foto6.jpg" alt="Foto 6" onclick="showModal(this.src, 'Kondangan date 🫶❤️')">
+        <img src="img/foto7.jpg" alt="Foto 7" onclick="showModal(this.src, 'OTW alpa guyss wkwk')">
+        <img src="img/foto8.jpg" alt="Foto 8" onclick="showModal(this.src, 'Udah sampe di kebun teh, selfie dulu sama ayaang')">
+        <img src="img/foto9.jpg" alt="Foto 9" onclick="showModal(this.src, 'Anjay selfie di Mandeh 😍🤍')">
+        <img src="img/foto10.jpg" alt="Foto 10" onclick="showModal(this.src, 'Ini foto waktu kamu di Mandeh 😍')">
+
+        <img src="img/foto11.jpg" alt="Foto 11" onclick="showModal(this.src, 'Kalau liat foto ini aku jadi inget, kamu happy banget diajakin Mam Seafood 🫶')">
+        <img src="img/foto12.jpg" alt="Foto 12" onclick="showModal(this.src, 'Seneng banget bisa makan bareng keluarga kamu di hari spesial 🤍')">
+        <img src="img/foto13.jpg" alt="Foto 13" onclick="showModal(this.src, 'Ke Bukittinggi yuk? Eh tiba-tiba udah sampai bukit aja, seneng banget akhirnya kesampean kesana bareng kamu 🫶🏻🥹❤️‍🩹')">
+        <img src="img/foto14.jpg" alt="Foto 14" onclick="showModal(this.src, 'Foto waktu aku sempro, banyak suka duka yang kita lewatin 🫶🏻🥹')">
+        <img src="img/foto15.jpg" alt="Foto 15" onclick="showModal(this.src, 'Finally I did! Im so happy to have you by my side, supporting me and cheering me up through everything')">
+
+        <img src="img/foto16.jpg" alt="Foto 16" onclick="showModal(this.src, 'Nah ini foto kamu lagi bukber bareng temen kamu, waktu itu kita LD cantik banget aslii 😍🤍🤍')">
+        <img src="img/foto17.jpg" alt="Foto 17" onclick="showModal(this.src, 'Ini foto kita waktu di puncak Gado-Gado 🫶🏻🥹')">
+        <img src="img/foto18.jpg" alt="Foto 18" onclick="showModal(this.src, 'Seneng dan sedih kalau liat foto ini 🥹')">
+        <img src="img/foto19.jpg" alt="Foto 19" onclick="showModal(this.src, 'Adung S.Si nih with pawang paling cantik yang always on my side')">
+        <img src="img/foto20.jpg" alt="Foto 20" onclick="showModal(this.src, 'Foto kita terakhir kali aku di Padang 🫶🏻, semoga tidak menjadi foto perpisahan 🥹')">
+      </div>
+
+      <button onclick="showPage('beranda')">Back</button>
+    </div>
+  </section>
+
+  <!-- Modal -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <img id="modal-img" src="" alt="">
+      <p id="modal-desc"></p>
+      <button class="close" onclick="closeModal()">Close</button>
+    </div>
+  </div>
+
+  <script>
+    function showPage(pageId) {
+      document.querySelectorAll('section').forEach(sec => {
+        sec.style.display = 'none';
+      });
+      document.getElementById(pageId).style.display = 'block';
+    }
+
+    function createHeart() {
+      const heart = document.createElement("div");
+      heart.className = "heart";
+      heart.innerHTML = "❤️";
+      heart.style.left = Math.random() * 100 + "vw";
+      heart.style.fontSize = Math.random() * 20 + 20 + "px";
+      heart.style.animationDuration = (Math.random() * 3 + 3) + "s";
+      document.getElementById("hearts-container").appendChild(heart);
+      setTimeout(() => heart.remove(), 6000);
+    }
+    setInterval(createHeart, 500);
+
+    const modal = document.getElementById("modal");
+    const modalImg = document.getElementById("modal-img");
+    const modalDesc = document.getElementById("modal-desc");
+
+    function showModal(src, desc) {
+      modal.style.display = "flex";
+      modalImg.src = src;
+      modalDesc.textContent = desc;
+    }
+    function closeModal() {
+      modal.style.display = "none";
+    }
+
+    // Audio control
+    const audio = document.getElementById("bg-audio");
+    function toggleAudio() {
+      if (audio.paused) audio.play();
+      else audio.pause();
+    }
+  </script>
+
+</body>
+</html>
